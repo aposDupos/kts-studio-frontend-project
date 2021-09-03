@@ -1,0 +1,43 @@
+@import "../colors";
+@import "../mixins";
+
+.git-repo-tile{
+  width: 100%;
+  padding: 12px;
+  display: flex;
+  column-gap: 12px;
+  @include border;
+  &-avatar{
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $accent;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 47px;
+  }
+  &-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 4px;
+    &__mid{
+      transition: 300ms ease-in-out;
+      &:hover{
+        color: $linkHover;
+      }
+    }
+    &__btm{
+      display: flex;
+      column-gap: 20px;
+    }
+    &__rate{
+      display: flex;
+      align-items: center;
+      column-gap: 4px;
+    }
+  }
+}
